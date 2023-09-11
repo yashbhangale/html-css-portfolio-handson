@@ -11,6 +11,30 @@
 </head>
 
 <body>
+    
+    <!-- Custom cursor div -->
+  <div id="custom-cursor"></div>
+
+  <!-- Inline JavaScript -->
+  <script>
+    // Your inline JavaScript code goes here
+    const customCursor = document.getElementById('custom-cursor');
+
+    document.addEventListener('mousemove', (e) => {
+      customCursor.style.left = e.clientX + 'px';
+      customCursor.style.top = e.clientY + 'px';
+    });
+
+    document.addEventListener('mousedown', () => {
+      customCursor.style.transform = 'scale(1.9) translate(-50%, -50%)';
+    });
+
+    document.addEventListener('mouseup', () => {
+      customCursor.style.transform = 'translate(-50%, -50%)';
+    });
+  </script>
+
+
   <header class="header">
     <nav class="navbar">
       <div class="navbar-container container">
